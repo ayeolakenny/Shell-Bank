@@ -8,6 +8,7 @@ import { stakeToken } from "../helpers/stakeToken";
 import { STAKE_DEDUCT_MODE } from "../types/enum";
 import { stakeOptions } from "../constants/stakeOptions";
 import { getTokenBalance } from "../helpers/getTokenBalance";
+import { errorToast } from "../lib/toast";
 
 export const StakeModal = () => {
   const {
@@ -35,7 +36,7 @@ export const StakeModal = () => {
 
   const handleTokenStake = async () => {
     if (!amount || Number(amount) <= 0) {
-      alert("Please pass a valid amount");
+      errorToast("Please pass a valid amount");
       return;
     }
     if (stakeDeductMode.toLowerCase() === STAKE_DEDUCT_MODE.BALANCE) {
@@ -45,18 +46,18 @@ export const StakeModal = () => {
         bankContract
       );
       if (Number(amount) > Number(initialTokenBalance)) {
-        alert("Insufficient funds in your balance");
+        errorToast("Insufficient funds in your balance");
         return;
       }
     }
 
     if (!chosenSymbol || tokenSymbols.indexOf(chosenSymbol) === -1) {
-      alert("Please select a token");
+      errorToast("Please select a token");
       return;
     }
 
     if (!stakeDuration || !stakeDurationPercentage) {
-      alert("Please select duration");
+      errorToast("Please select duration");
       return;
     }
 

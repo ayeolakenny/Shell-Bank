@@ -1,4 +1,5 @@
 import { BigNumber, Contract, Signer } from "ethers";
+import { errorToast } from "../lib/toast";
 import { TokenContractInterface } from "../types/interface";
 
 export const depositTokens = async (
@@ -17,7 +18,7 @@ export const depositTokens = async (
       });
     } catch (err: any) {
       if (err.data.message.includes("insufficient funds")) {
-        alert("Insufficient funds");
+        errorToast("Insufficient funds");
       }
     }
   } else {
@@ -36,7 +37,7 @@ export const depositTokens = async (
         err.reason ===
         "execution reverted: ERC20: transfer amount exceeds balance"
       ) {
-        alert("Insufficient funds");
+        errorToast("Insufficient funds");
       }
     }
   }

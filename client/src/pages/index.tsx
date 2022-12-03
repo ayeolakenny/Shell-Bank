@@ -29,6 +29,7 @@ import { withdrawStakedTokens } from "../helpers/withdrawStakedToken";
 import { getSigner } from "../helpers/getSigner";
 import { getTokenBalances } from "../helpers/getTokenBalances";
 import { getUserStakedPositions } from "../helpers/getUserStakedPositions";
+import { errorToast } from "../lib/toast";
 
 dayjs.extend(relativeTime);
 
@@ -116,7 +117,7 @@ const Home = () => {
     if (response) {
       await withdrawStakedTokens(bankContract, signer!, stakingPositionId);
     } else {
-      alert("Transaction canceled");
+      errorToast("Transaction canceled");
     }
   };
 

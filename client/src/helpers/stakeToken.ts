@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { BigNumber, Contract, Signer } from "ethers";
+import { errorToast, successToast } from "../lib/toast";
 import { STAKE_DEDUCT_MODE } from "../types/enum";
 import { TokenContractInterface } from "../types/interface";
 import { toEther } from "../utils/etherConversion";
@@ -39,13 +40,13 @@ export const stakeToken = async (
         fromBalance
       );
 
-    alert("Intrest has been paid to your balance");
+    successToast("Intrest has been paid to your balance");
   } catch (err: any) {
     if (
       err.reason ===
       "execution reverted: ERC20: transfer amount exceeds balance"
     ) {
-      alert("Insufficient funds");
+      errorToast("Insufficient funds");
     }
   }
 };

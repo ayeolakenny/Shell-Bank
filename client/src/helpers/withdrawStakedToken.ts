@@ -1,4 +1,5 @@
 import { Contract, Signer } from "ethers";
+import { successToast } from "../lib/toast";
 
 export const withdrawStakedTokens = async (
   bankContract: Contract | undefined,
@@ -7,7 +8,7 @@ export const withdrawStakedTokens = async (
 ) => {
   try {
     await bankContract?.connect(signer).withdrawStakedToken(stakePositionId);
-    alert("Balance has been credited successfully");
+    successToast("Balance has been credited successfully");
   } catch (err: any) {
     console.log(err);
   }

@@ -8,6 +8,7 @@ import { toEther, toWei } from "../utils/etherConversion";
 import { depositTokens } from "../helpers/depositToken";
 import { withdrawTokens } from "../helpers/withdrawToken";
 import { getTokenBalances } from "../helpers/getTokenBalances";
+import { errorToast } from "../lib/toast";
 
 export const TransactionModal = () => {
   const {
@@ -30,11 +31,11 @@ export const TransactionModal = () => {
 
   const handleDepositOrWithdrawalOfTokens = async () => {
     if (!amount || Number(amount) <= 0) {
-      alert("Please pass a valid amount");
+      errorToast("Please pass a valid amount");
       return;
     }
     if (!chosenSymbol || tokenSymbols.indexOf(chosenSymbol) === -1) {
-      alert("Plase select a token");
+      errorToast("Plase select a token");
       return;
     }
     const wei = toWei(amount);

@@ -31,6 +31,7 @@ export const getUserStakedPositions = async (
       });
     }
 
+    console.log(parsedUserStakes);
     return parsedUserStakes;
   } catch (err: any) {
     console.log(err);

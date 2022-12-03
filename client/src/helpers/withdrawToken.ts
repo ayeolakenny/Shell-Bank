@@ -1,4 +1,5 @@
 import { BigNumber, Contract, Signer } from "ethers";
+import { errorToast } from "../lib/toast";
 
 export const withdrawTokens = async (
   wei: BigNumber,
@@ -14,7 +15,7 @@ export const withdrawTokens = async (
     }
   } catch (err: any) {
     if (err.error.data.message === "execution reverted: Insufficient funds") {
-      alert("Insufficient funds");
+      errorToast("Insufficient funds");
     }
   }
 };
