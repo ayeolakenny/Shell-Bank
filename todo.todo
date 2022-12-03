@@ -1,0 +1,28 @@
+// Fixes
+1. Burn token after giving from staking
+2. Staked token not showing except i make a change
+3. Deposit and staking always failing on first call (not sure, still checking)
+4. check if user is connected immediately he gets to the website(done)
+5. Solidity event listeners needed in 
+    1. Deposit token (done)
+    2. Withdraw token (done)
+    3. Stake token(done)
+    4. Withdraw staked tokens
+    5. When interest has been paid
+
+// Test cases
+1. Deposit more than what is in your balance (fine)
+2. Withdraw more than what you have (fine)
+3. Stake from balance more than what you have (fine)
+4. Stake from your wallet more than what you have (fine)
+5. Normal stake token from Balance (fine)
+6. Normal stake token from wallet (fine)
+7. Try at least 3 token rate (fine)
+
+// Features
+1. Show staked assets (done)
+2. Add button that opens stake modal if there is no staked assets yet(done)
+3. Add more chosen time based on staked time (done)
+4. Button to filter to show only active and all tokens (done)
+5. switch all alerts to react toasts
+6. write tests
