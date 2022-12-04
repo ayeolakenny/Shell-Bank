@@ -69,7 +69,6 @@ export const Header = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
                 <Nav.Link
                   href="#pricing"
                   onClick={() => setShowStakingModal(true)}

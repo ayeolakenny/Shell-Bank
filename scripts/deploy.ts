@@ -48,12 +48,12 @@ async function main() {
 
   await bankContract.whitelistTokens("Wbtc", wbtcToken.address);
 
-  console.log("Bank deployed to", bankContract.address, "by", owner.address);
-  console.log("Shell deployed to", shell.address, "by", owner.address);
-  console.log("Bnb deployed to", bnbToken.address, "by", owner.address);
-  console.log("Link deployed to", linkToken.address, "by", owner.address);
-  console.log("Usdt deployed to", usdtToken.address, "by", owner.address);
-  console.log("Wbtc deployed to", wbtcToken.address, "by", owner.address);
+  console.log("Bank deployed to", bankContract.address);
+  console.log("Shell deployed to", shell.address);
+  console.log("Bnb deployed to", bnbToken.address);
+  console.log("Link deployed to", linkToken.address);
+  console.log("Usdt deployed to", usdtToken.address);
+  console.log("Wbtc deployed to", wbtcToken.address);
 
   // await linkToken
   //   .connect(owner)

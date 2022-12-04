@@ -138,7 +138,6 @@ contract Bank {
         uint interest = calculateInterest(tokenAmount, percentagePerAnnum, 1);
 
         // IERC20(whitelistedTokens["Shell"]).transfer(msg.sender, interest);
-        // !Burn token that has been sent to user
         balances[msg.sender]["Shell"] += interest;
 
         positionIdsByAddress[msg.sender].push(_currentPositionId.current());
