@@ -5,8 +5,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 
 import { AppContext } from "../context/AppContext";
 import { BANK_CONTRACT_MUMBAI_ADDRESS } from "../constants";
-import { UserAddressNav } from "../compoents/UserAddressNav";
-import { TransactionModal } from "../compoents/TransactionModal";
+import { UserAddressNav } from "../components/UserAddressNav";
+import { TransactionModal } from "../components/TransactionModal";
 import { getTokenContracts } from "../helpers/getTokenContracts";
 
 import { Navigation, Pagination, A11y } from "swiper";
@@ -20,7 +20,7 @@ import "swiper/css/scrollbar";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
-import { StakeModal } from "../compoents/StakeModal";
+import { StakeModal } from "../components/StakeModal";
 
 import bankArtifact from "../artifacts/contracts/Bank.sol/Bank.json";
 

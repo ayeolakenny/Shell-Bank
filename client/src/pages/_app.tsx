@@ -1,7 +1,7 @@
 // import "../styles/globals.css";
 import { Fragment } from "react";
 import type { AppProps } from "next/app";
-import { Header } from "../compoents/Header";
+import { Header } from "../components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { MetaMaskInpageProvider } from "@metamask/providers";
 import { Toaster } from "react-hot-toast";
