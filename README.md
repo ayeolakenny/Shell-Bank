@@ -12,7 +12,7 @@
 
 ## Important Links
 
-Project Link: [https://shell-blond.vercel.app/](https://shell-blond.vercel.app/)
+Project Link: [https://shell-client.vercel.app](https://shell-client.vercel.app)
 
 Github Link: [https://github.com/ayeolakenny/Shell](https://github.com/ayeolakenny/Shell)
 
